@@ -139,6 +139,11 @@ body.alarm { --eye: var(--blood); --eye-soft: #ffb3ac; }
     </dl>
   </section>
 
+  <section id="services">
+    <h2>services</h2>
+    <ul class="list" id="services-list"></ul>
+  </section>
+
   <section id="projects">
     <h2>projects</h2>
     <div id="groups"></div>
@@ -164,10 +169,12 @@ body.alarm { --eye: var(--blood); --eye-soft: #ffb3ac; }
 <script>
 const GH = "https://github.com/PlatanosVerdes/";
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-let all = {};
+let all = {}, services = [];
 const rows = (items) => items.map((p) => `<li id="p-${esc(p.name)}"><a class="name" href="${GH}${encodeURIComponent(p.name)}" target="_blank" rel="noopener">${esc(p.name)}</a><span class="what">${esc(p.description)}</span><span class="stack">${esc(p.language)}</span></li>`).join("");
 fetch("projects.json").then((r) => r.json()).then((data) => {
   document.getElementById("groups").innerHTML = data.groups.map((g) => `<p class="group">${esc(g.name)}</p><ul class="list">${rows(g.projects)}</ul>`).join("");
+  document.getElementById("services-list").innerHTML = data.services.map((x) => `<li><a class="name" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name)}</a><span class="what">${esc(x.description)}</span><span class="stack">${new URL(x.url).hostname === "t.me" ? "telegram" : esc(new URL(x.url).hostname)}</span></li>`).join("");
+  services = data.services;
   document.getElementById("archived-list").innerHTML = rows(data.archived);
   document.getElementById("university-list").innerHTML = rows(data.university);
   all = Object.fromEntries([...data.groups.flatMap((g) => g.projects), ...data.archived, ...data.university].map((p) => [p.name.toLowerCase(), p]));
@@ -179,7 +186,8 @@ const say = (html, cls = "") => { const d = document.createElement("div"); d.cla
 const jump = (id) => { const el = document.getElementById(id); if (!el) return; el.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" }); if (el.tagName === "LI") { el.classList.add("lit"); setTimeout(() => el.classList.remove("lit"), 2200); } };
 
 const commands = {
-  help: () => say(`whoami · projects · ls · open &lt;name&gt; · contact · clear`, "dim"),
+  help: () => say(`whoami · services · projects · ls · open &lt;name&gt; · contact · clear`, "dim"),
+  services: () => { say(services.map((x) => `<div class="proj"><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name)}</a><span>${esc(x.description)}</span></div>`).join("")); jump("services"); },
   whoami: () => { say("cloud security engineer · IAM, Zero Trust, CSPM, DevSecOps"); jump("whoami"); },
   projects: () => jump("projects"),
   ls: () => say(Object.values(all).map((p) => `<div class="proj"><button data-open="${esc(p.name)}">${esc(p.name)}</button><span>${esc(p.description)}</span></div>`).join("")),

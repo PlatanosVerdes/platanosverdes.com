@@ -12,7 +12,7 @@ Static site served by GitHub Pages at [platanosverdes.com](https://platanosverde
 
 ## Adding or changing a project
 
-Edit `projects.json` and push. Each project is a name (the GitHub repository under PlatanosVerdes),
+Edit `projects.json` and push. `services` are the things anyone can use, each with its link. Each project is a name (the GitHub repository under PlatanosVerdes),
 a one-line description and a language. `groups` are the sections under *projects*; `archived` and
 `university` are the two lists at the bottom.
 
