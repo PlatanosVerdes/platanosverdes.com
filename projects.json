@@ -1,26 +1,4 @@
 {
-  "services": [
-    {
-      "name": "torre",
-      "description": "Airport departures and arrivals, readable on a phone",
-      "url": "https://torre.platanosverdes.com"
-    },
-    {
-      "name": "@TorreFlightsBot",
-      "description": "Telegram alerts for the flights you follow",
-      "url": "https://t.me/TorreFlightsBot"
-    },
-    {
-      "name": "@WuallaBot",
-      "description": "Telegram alerts for new listings in your Wallapop searches",
-      "url": "https://t.me/WuallaBot"
-    },
-    {
-      "name": "F1Tracks",
-      "description": "Every F1 circuit, as a website",
-      "url": "https://f1tracks.netlify.app"
-    }
-  ],
   "groups": [
     {
       "name": "Homelab",
@@ -58,12 +36,28 @@
         {
           "name": "torre",
           "description": "Airport flight board with Telegram alerts",
-          "language": "Go"
+          "language": "Go",
+          "links": [
+            {
+              "label": "torre.platanosverdes.com",
+              "url": "https://torre.platanosverdes.com"
+            },
+            {
+              "label": "@TorreFlightsBot",
+              "url": "https://t.me/TorreFlightsBot"
+            }
+          ]
         },
         {
           "name": "wallabot",
           "description": "Public Telegram bot for new Wallapop listings",
-          "language": "Go"
+          "language": "Go",
+          "links": [
+            {
+              "label": "@WuallaBot",
+              "url": "https://t.me/WuallaBot"
+            }
+          ]
         },
         {
           "name": "wallapop-catalogue",
@@ -124,7 +118,13 @@
     {
       "name": "F1Tracks",
       "description": "Every F1 circuit, as a website",
-      "language": "JavaScript"
+      "language": "JavaScript",
+      "links": [
+        {
+          "label": "f1tracks.netlify.app",
+          "url": "https://f1tracks.netlify.app"
+        }
+      ]
     },
     {
       "name": "LSB_Steganography",
