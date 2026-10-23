@@ -67,11 +67,9 @@ h2::before { content: "## "; color: var(--eye); letter-spacing: 0; }
 .group { margin: 28px 0 8px; font-size: 12px; color: var(--dim); }
 .group:first-of-type { margin-top: 0; }
 .list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-.list li { display: grid; grid-template-columns: 26ch 1fr auto; gap: 16px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.list li { display: grid; grid-template-columns: 22ch 1fr auto; gap: 16px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--line); }
 .list li.lit { background: linear-gradient(90deg, rgba(140,255,63,.07), transparent); }
-.list a.name { color: var(--text); font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; min-width: 0; }
-.list .icon { width: 20px; height: 20px; border-radius: 5px; flex: none; object-fit: cover; }
-.list .icon.none { display: inline-block; background: var(--line); }
+.list a.name { color: var(--text); font-weight: 500; text-decoration: none; }
 .list a.name:hover { color: var(--eye); }
 .list .what { color: var(--dim); min-width: 0; }
 .list .stack { color: var(--dim); font-size: 12px; white-space: nowrap; }
@@ -180,13 +178,10 @@ const GH = "https://github.com/PlatanosVerdes/";
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 let all = {}, services = [], site = null;
 const sections = ["whoami", "services", "projects", "archived", "university"];
-// "repo:path" is a file in that repo, served by jsDelivr so a change there shows here; anything else is a file of this site.
-const iconURL = (icon) => { const [repo, path] = icon.split(/:(.+)/); return path ? `https://cdn.jsdelivr.net/gh/PlatanosVerdes/${encodeURIComponent(repo)}@main/${path}` : icon; };
-const icon = (p) => p.icon ? `<img class="icon" src="${esc(iconURL(p.icon))}" alt="" loading="lazy">` : `<span class="icon none" aria-hidden="true"></span>`;
-const rows = (items) => items.map((p) => `<li id="${esc(p.name)}"><a class="name" href="${GH}${encodeURIComponent(p.name)}" target="_blank" rel="noopener">${icon(p)}${esc(p.name)}</a><span class="what">${esc(p.description)}</span><span class="stack">${esc(p.language)}</span></li>`).join("");
+const rows = (items) => items.map((p) => `<li id="${esc(p.name)}"><a class="name" href="${GH}${encodeURIComponent(p.name)}" target="_blank" rel="noopener">${esc(p.name)}</a><span class="what">${esc(p.description)}</span><span class="stack">${esc(p.language)}</span></li>`).join("");
 fetch("projects.json").then((r) => r.json()).then((data) => {
   document.getElementById("groups").innerHTML = data.groups.map((g) => `<p class="group">${esc(g.name)}</p><ul class="list">${rows(g.projects)}</ul>`).join("");
-  document.getElementById("services-list").innerHTML = data.services.map((x) => `<li><a class="name" href="${esc(x.url)}" target="_blank" rel="noopener">${icon(x)}${esc(x.name)}</a><span class="what">${esc(x.description)}</span><span class="stack">${new URL(x.url).hostname === "t.me" ? "telegram" : esc(new URL(x.url).hostname)}</span></li>`).join("");
+  document.getElementById("services-list").innerHTML = data.services.map((x) => `<li><a class="name" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name)}</a><span class="what">${esc(x.description)}</span><span class="stack">${new URL(x.url).hostname === "t.me" ? "telegram" : esc(new URL(x.url).hostname)}</span></li>`).join("");
   services = data.services;
   document.getElementById("archived-list").innerHTML = rows(data.archived);
   document.getElementById("university-list").innerHTML = rows(data.university);

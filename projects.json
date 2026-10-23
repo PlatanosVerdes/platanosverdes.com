@@ -3,26 +3,22 @@
     {
       "name": "torre",
       "description": "Airport departures and arrivals, readable on a phone",
-      "url": "https://torre.platanosverdes.com",
-      "icon": "torre:assets/bot-avatar.svg"
+      "url": "https://torre.platanosverdes.com"
     },
     {
       "name": "@TorreFlightsBot",
       "description": "Telegram alerts for the flights you follow",
-      "url": "https://t.me/TorreFlightsBot",
-      "icon": "torre:assets/bot-avatar.svg"
+      "url": "https://t.me/TorreFlightsBot"
     },
     {
       "name": "@WuallaBot",
       "description": "Telegram alerts for new listings in your Wallapop searches",
-      "url": "https://t.me/WuallaBot",
-      "icon": "icons/wallabot.jpg"
+      "url": "https://t.me/WuallaBot"
     },
     {
       "name": "F1Tracks",
       "description": "Every F1 circuit, as a website",
-      "url": "https://f1tracks.netlify.app",
-      "icon": "icons/F1Tracks.svg"
+      "url": "https://f1tracks.netlify.app"
     }
   ],
   "groups": [
@@ -32,26 +28,22 @@
         {
           "name": "bifrost",
           "description": "Bridges an IPFS channel list into Jellyfin, shared through Cloudflare Access",
-          "language": "Go",
-          "icon": "bifrost:web/favicon.svg"
+          "language": "Go"
         },
         {
           "name": "sleipnir",
           "description": "Moves gluetun VPN tunnels between countries without restarts",
-          "language": "Go",
-          "icon": "sleipnir:cmd/sleipnir/web/icon.svg"
+          "language": "Go"
         },
         {
           "name": "muninn",
           "description": "Usage and abuse metrics for every bot",
-          "language": "Go",
-          "icon": "muninn:web/icon.svg"
+          "language": "Go"
         },
         {
           "name": "rpi-homeserver",
           "description": "Two-node Raspberry Pi platform: SOPS secrets, deploy on push, monitoring",
-          "language": "Compose",
-          "icon": "icons/rpi-homeserver.svg"
+          "language": "Compose"
         }
       ]
     },
@@ -61,44 +53,37 @@
         {
           "name": "laliga-fantasy",
           "description": "Multi-tenant decision panel for LaLiga Fantasy",
-          "language": "Go",
-          "icon": "laliga-fantasy:assets/favicon.png"
+          "language": "Go"
         },
         {
           "name": "torre",
           "description": "Airport flight board with Telegram alerts",
-          "language": "Go",
-          "icon": "torre:assets/bot-avatar.svg"
+          "language": "Go"
         },
         {
           "name": "wallabot",
           "description": "Public Telegram bot for new Wallapop listings",
-          "language": "Go",
-          "icon": "icons/wallabot.jpg"
+          "language": "Go"
         },
         {
           "name": "wallapop-catalogue",
           "description": "Renews expired Wallapop listings daily",
-          "language": "Go",
-          "icon": "icons/wallapop-catalogue.jpg"
+          "language": "Go"
         },
         {
           "name": "PolFerrerAcademyOffers",
           "description": "Telegram alerts for new academy offers",
-          "language": "Python",
-          "icon": "icons/PolFerrerAcademyOffers.svg"
+          "language": "Python"
         },
         {
           "name": "one-pace-downloader",
           "description": "One Pace episodes, organised for Jellyfin",
-          "language": "Python",
-          "icon": "icons/one-pace-downloader.svg"
+          "language": "Python"
         },
         {
           "name": "HyKeos",
           "description": "Discord bot",
-          "language": "Python",
-          "icon": "icons/HyKeos.svg"
+          "language": "Python"
         }
       ]
     },
@@ -108,20 +93,17 @@
         {
           "name": "workflows",
           "description": "Reusable release pipeline shared by every repo",
-          "language": "Actions",
-          "icon": "icons/workflows.svg"
+          "language": "Actions"
         },
         {
           "name": "gonana",
           "description": "Shared Go packages, including the bot metrics contract",
-          "language": "Go",
-          "icon": "icons/gonana.svg"
+          "language": "Go"
         },
         {
           "name": "rpi-services",
           "description": "Personal services deployed on the homeserver",
-          "language": "Compose",
-          "icon": "icons/rpi-services.svg"
+          "language": "Compose"
         }
       ]
     }
@@ -130,22 +112,19 @@
     {
       "name": "air-tag",
       "description": "Self-hosted Find My tracker. Since macOS 15 an AirTag's keys sit behind SIP in an encrypted keychain item",
-      "language": "Python",
-      "icon": "icons/air-tag.svg"
+      "language": "Python"
     },
     {
       "name": "cal-bridge",
       "description": "Calendars for ESP32 e-ink screens. Parked until the screens are worth their price",
-      "language": "Python",
-      "icon": "icons/cal-bridge.svg"
+      "language": "Python"
     }
   ],
   "university": [
     {
       "name": "F1Tracks",
       "description": "Every F1 circuit, as a website",
-      "language": "JavaScript",
-      "icon": "icons/F1Tracks.svg"
+      "language": "JavaScript"
     },
     {
       "name": "LSB_Steganography",
