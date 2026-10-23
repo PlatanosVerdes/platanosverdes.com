@@ -4,13 +4,13 @@
       "name": "torre",
       "description": "Airport departures and arrivals, readable on a phone",
       "url": "https://torre.platanosverdes.com",
-      "icon": "icons/torre.svg"
+      "icon": "torre:assets/bot-avatar.svg"
     },
     {
       "name": "@TorreFlightsBot",
       "description": "Telegram alerts for the flights you follow",
       "url": "https://t.me/TorreFlightsBot",
-      "icon": "icons/torre.svg"
+      "icon": "torre:assets/bot-avatar.svg"
     },
     {
       "name": "@WuallaBot",
@@ -33,19 +33,19 @@
           "name": "bifrost",
           "description": "Bridges an IPFS channel list into Jellyfin, shared through Cloudflare Access",
           "language": "Go",
-          "icon": "icons/bifrost.svg"
+          "icon": "bifrost:web/favicon.svg"
         },
         {
           "name": "sleipnir",
           "description": "Moves gluetun VPN tunnels between countries without restarts",
           "language": "Go",
-          "icon": "icons/sleipnir.svg"
+          "icon": "sleipnir:cmd/sleipnir/web/icon.svg"
         },
         {
           "name": "muninn",
           "description": "Usage and abuse metrics for every bot",
           "language": "Go",
-          "icon": "icons/muninn.svg"
+          "icon": "muninn:web/icon.svg"
         },
         {
           "name": "rpi-homeserver",
@@ -62,13 +62,13 @@
           "name": "laliga-fantasy",
           "description": "Multi-tenant decision panel for LaLiga Fantasy",
           "language": "Go",
-          "icon": "icons/laliga-fantasy.png"
+          "icon": "laliga-fantasy:assets/favicon.png"
         },
         {
           "name": "torre",
           "description": "Airport flight board with Telegram alerts",
           "language": "Go",
-          "icon": "icons/torre.svg"
+          "icon": "torre:assets/bot-avatar.svg"
         },
         {
           "name": "wallabot",

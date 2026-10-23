@@ -180,7 +180,9 @@ const GH = "https://github.com/PlatanosVerdes/";
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 let all = {}, services = [], site = null;
 const sections = ["whoami", "services", "projects", "archived", "university"];
-const icon = (p) => p.icon ? `<img class="icon" src="${esc(p.icon)}" alt="" loading="lazy">` : `<span class="icon none" aria-hidden="true"></span>`;
+// "repo:path" is a file in that repo, served by jsDelivr so a change there shows here; anything else is a file of this site.
+const iconURL = (icon) => { const [repo, path] = icon.split(/:(.+)/); return path ? `https://cdn.jsdelivr.net/gh/PlatanosVerdes/${encodeURIComponent(repo)}@main/${path}` : icon; };
+const icon = (p) => p.icon ? `<img class="icon" src="${esc(iconURL(p.icon))}" alt="" loading="lazy">` : `<span class="icon none" aria-hidden="true"></span>`;
 const rows = (items) => items.map((p) => `<li id="${esc(p.name)}"><a class="name" href="${GH}${encodeURIComponent(p.name)}" target="_blank" rel="noopener">${icon(p)}${esc(p.name)}</a><span class="what">${esc(p.description)}</span><span class="stack">${esc(p.language)}</span></li>`).join("");
 fetch("projects.json").then((r) => r.json()).then((data) => {
   document.getElementById("groups").innerHTML = data.groups.map((g) => `<p class="group">${esc(g.name)}</p><ul class="list">${rows(g.projects)}</ul>`).join("");

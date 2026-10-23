@@ -17,3 +17,10 @@ a one-line description and a language. `groups` are the sections under *projects
 `university` are the two lists at the bottom.
 
 Pages publishes a push to `main` in about a minute.
+
+## Icons
+
+A project's `icon` is `repo:path`, a file in that repository (for example `bifrost:web/favicon.svg`),
+served through jsDelivr, so changing the icon in the repo changes it here. jsDelivr caches a branch
+for up to 12 hours; `https://purge.jsdelivr.net/gh/PlatanosVerdes/<repo>@main/<path>` refreshes it
+at once. A plain path (`icons/...`) is a file of this site, for repos that have no icon yet.
