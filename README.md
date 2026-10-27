@@ -6,8 +6,7 @@ Static site served by GitHub Pages at [platanosverdes.com](https://platanosverde
 | :--- | :--- |
 | `index.html` | The home page: the Watcher, its console, whoami and the project lists |
 | `projects.json` | Every project shown on the home page and in the console |
-| `homelab.html` | What the Homelab sign-in is; the home page of the Google OAuth app |
-| `privacy.html` | Privacy policy, linked from the Google OAuth app |
+| `privacy.html` | Privacy policy of the Google OAuth app (PlatanosVerdes): the private services and Apex |
 | `logo.svg` | The Watcher |
 
 ## Adding or changing a project
