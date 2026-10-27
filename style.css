@@ -1,4 +1,4 @@
-/* Shared by homelab.html and privacy.html, matching the home page. */
+/* Used by privacy.html, matching the home page. */
 :root { --bg: #07080a; --line: #1d2128; --dim: #737c8a; --text: #d6dbe2; --eye: #8cff3f; color-scheme: dark; }
 body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.7 "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace; }
 main { max-width: 720px; margin: 0 auto; padding: 56px max(20px, env(safe-area-inset-right, 0px)) 48px max(20px, env(safe-area-inset-left, 0px)); display: grid; gap: 10px; justify-items: start; }
