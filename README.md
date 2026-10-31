@@ -8,6 +8,7 @@ Static site served by GitHub Pages at [platanosverdes.com](https://platanosverde
 | `projects.json` | Every project shown on the home page and in the console |
 | `privacy.html` | Privacy policy of the Google OAuth app (PlatanosVerdes): the private services and Apex |
 | `logo.svg` | The Watcher |
+| `apple-touch-icon.png` | The Watcher for the iOS home screen, which ignores SVG icons: `rsvg-convert --width 180 --height 180 logo.svg -o apple-touch-icon.png` after changing the logo |
 
 ## Adding or changing a project
 
